@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Waste Organic Fertilizer</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-cream: #FDFBF7;
+      --bg-card: #FAF6F0;
+      --text-black: #1A1A1A;
+      --pink-primary: #E8A0BF;
+      --pink-soft: #FCE4EC;
+      --pink-accent: #D885A3;
+      --sage-green: #8F9E8B;
+      --sage-light: #E8EFE8;
+      --border-dark: #1A1A1A;
+      --shadow-chic: 4px 4px 0px #1A1A1A;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-black);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+
+    /* Header Styling */
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: #FFFFFF;
+      border: 2px solid var(--border-dark);
+      border-radius: 20px;
+      box-shadow: var(--shadow-chic);
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .chic-badge {
+      display: inline-block;
+      background-color: var(--pink-soft);
+      color: var(--pink-accent);
+      border: 1px solid var(--pink-accent);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .authors {
+      font-family: 'Caveat', cursive;
+      font-size: 1.6rem;
+      color: var(--pink-accent);
+      margin-bottom: 10px;
+    }
+
+    .hero-tagline {
+      font-size: 1.1rem;
+      color: #555;
+      font-style: italic;
+    }
+
+    /* Section Styling */
+    section {
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      background: var(--border-dark);
+    }
+
+    /* Background Box */
+    .story-card {
+      background: #FFFFFF;
+      border: 2px solid var(--border-dark);
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: var(--shadow-chic);
+      margin-bottom: 30px;
+    }
+
+    .story-card p {
+      margin-bottom: 15px;
+    }
+
+    .story-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Benefits Grid */
+    .grid-benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .benefit-card {
+      background: var(--bg-card);
+      border: 2px solid var(--border-dark);
+      border-radius: 16px;
+      padding: 20px;
+      transition: transform 0.2s ease;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .benefit-number {
+      font-family: 'Caveat', cursive;
+      font-size: 1.8rem;
+      color: var(--pink-accent);
+      font-weight: bold;
+    }
+
+    .benefit-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
+
+    /* Ingredients Section */
+    .ingredients-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .pill {
+      background: var(--pink-soft);
+      border: 2px solid var(--border-dark);
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      box-shadow: 2px 2px 0px var(--border-dark);
+    }
+
+    /* Steps / Method Timeline */
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .step-item {
+      background: #FFFFFF;
+      border: 2px solid var(--border-dark);
+      border-radius: 14px;
+      padding: 18px 22px;
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      box-shadow: 3px 3px 0px var(--border-dark);
+    }
+
+    .step-num {
+      background: var(--sage-light);
+      color: var(--border-dark);
+      border: 1.5px solid var(--border-dark);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    /* Results Grid */
+    .results-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .results-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .result-card {
+      background: #FFFFFF;
+      border: 2px solid var(--border-dark);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: var(--shadow-chic);
+    }
+
+    .result-card.solid {
+      background: var(--sage-light);
+    }
+
+    .result-card.liquid {
+      background: var(--pink-soft);
+    }
+
+    .result-card h3 {
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-family: 'Caveat', cursive;
+      font-size: 1.5rem;
+      color: var(--text-black);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Hero Header -->
+    <header>
+      <span class="chic-badge">KI Group 5 Project</span>
+      <h1>Food Waste Organic Fertilizer</h1>
+      <div class="authors">by Laras, Keysha, Alcuino, Vanka, & Aufa</div>
+      <p class="hero-tagline">Turning daily kitchen scraps into rich, sustainable soil.</p>
+    </header>
+
+    <!-- Background Section -->
+    <section>
+      <h2 class="section-title">The Background</h2>
+      <div class="story-card">
+        <p>Food waste is a huge environmental issue everywhere. Every day, homes, markets, and restaurants throw away tons of fruit peels and leftover veggies. In landfills, this waste rots and releases harmful greenhouse gases. Meanwhile, synthetic chemical fertilizers damage long-term soil health.</p>
+        <p><strong>The Solution:</strong> Composting turns food waste into nutrient-rich soil via beneficial microorganisms, reducing landfill waste and providing an eco-friendly, budget-friendly alternative for plant care.</p>
+      </div>
+
+      <h2 class="section-title">Key Benefits</h2>
+      <div class="grid-benefits">
+        <div class="benefit-card">
+          <span class="benefit-number">01</span>
+          <h3>Reduces Waste</h3>
+          <p>Turns food scraps and organic waste into something useful instead of sending them to landfills.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-number">02</span>
+          <h3>Improves Soil Health</h3>
+          <p>Adds organic matter and essential nutrients that help maintain rich, healthy soil.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-number">03</span>
+          <h3>Supports Microorganisms</h3>
+          <p>Provides organic material that fuels beneficial microbial activity in the soil.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-number">04</span>
+          <h3>Cost-Effective</h3>
+          <p>Can easily be made from readily available household or agricultural waste scraps.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-number">05</span>
+          <h3>Circular Economy</h3>
+          <p>Converts organic waste into a valuable resource, returning nutrients back to nature.</p>
+        </div>
+        <div class="benefit-card">
+          <span class="benefit-number">06</span>
+          <h3>Retains Water</h3>
+          <p>Improves the soil's structure and overall ability to hold moisture effectively.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ingredients -->
+    <section>
+      <h2 class="section-title">Materials & Ingredients</h2>
+      <div class="ingredients-pills">
+        <div class="pill">🍎 Food Waste</div>
+        <div class="pill">🪴 Soil / Coco Peat</div>
+        <div class="pill">🪣 Buckets (2x)</div>
+        <div class="pill">🔪 Knife</div>
+        <div class="pill">💧 Water</div>
+        <div class="pill">🚰 Dispenser Tap</div>
+        <div class="pill">🧫 EM4 Bacteria Solution</div>
+      </div>
+    </section>
+
+    <!-- Method -->
+    <section>
+      <h2 class="section-title">Step-by-Step Method</h2>
+      <div class="steps-list">
+        <div class="step-item"><div class="step-num">1</div><div>Drill a 5 cm hole near the bottom of the first bucket, install a water tap, and seal it to prevent leaks.</div></div>
+        <div class="step-item"><div class="step-num">2</div><div>Cut the center out of one bucket lid to leave only the outer rim, then drill small drainage holes across the bottom of the second bucket.</div></div>
+        <div class="step-item"><div class="step-num">3</div><div>Place the cut lid rim onto the lower bucket, stack the perforated bucket on top, and set the unit on a raised stand.</div></div>
+        <div class="step-item"><div class="step-num">4</div><div>Mix 1 L of water and 20 mL of EM4 Agriculture solution inside a spray bottle.</div></div>
+        <div class="step-item"><div class="step-num">5</div><div>Add a base layer of rice husk ash, raw rice husks, coco peat, or soil inside the upper bucket.</div></div>
+        <div class="step-item"><div class="step-num">6</div><div>Chop kitchen waste (vegetables, fruit scraps, eggshells) into small pieces and add a layer inside.</div></div>
+        <div class="step-item"><div class="step-num">7</div><div>Cover waste with husk ash/husks, spray bioactivator solution until moist, and close the top lid.</div></div>
+        <div class="step-item"><div class="step-num">8</div><div>Repeat the waste, husk layer, and spraying process as new kitchen scraps are added.</div></div>
+        <div class="step-item"><div class="step-num">9</div><div><strong>Liquid Harvest:</strong> Collect liquid organic fertilizer (leachate) from the tap after 2–4 weeks; expose to sunlight in a clear bottle before use.</div></div>
+        <div class="step-item"><div class="step-num">10</div><div><strong>Solid Harvest:</strong> Allow solid waste in the upper bucket to decompose fully for 2–3 months before harvesting solid compost.</div></div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section>
+      <h2 class="section-title">Results & Impact</h2>
+      <div class="results-grid">
+        <div class="result-card solid">
+          <h3>🌱 Solid Compost</h3>
+          <p>Improves soil structure, aeration, and long-term water retention for healthiest root growth.</p>
+        </div>
+        <div class="result-card liquid">
+          <h3>💧 Liquid Fertilizer</h3>
+          <p>Provides readily available nutrients for fast plant absorption and growth enhancement.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      Made with 🌸 for a greener planet.
+    </footer>
+
+  </div>
+
+</body>
+</html>
